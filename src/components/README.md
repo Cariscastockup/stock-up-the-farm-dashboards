@@ -7,8 +7,9 @@ The main drawer of the dashboard containing links leading to other pages
 ``` open: Takes Boolean value indicating whether the drawers is open or not
 ```
 
-## AppListItem
+### AppListItem
 Built on top of the components of ListItem in Mui. Returns a list item
+
 Props : *Icon: Renders and Icon Component in the list item
         *image: If provided, renders an image in the place of Icon
         *subtitle: Subtitle of the list item
