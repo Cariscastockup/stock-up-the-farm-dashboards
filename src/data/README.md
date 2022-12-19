@@ -1,5 +1,5 @@
 # Data
-This file contains most of the static data used on the app ui
+This directory contains most of the static data used in the app ui
 
 Below are the various files and what is contained in the;
 
