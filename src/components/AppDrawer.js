@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Drawer, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Drawer, List } from "@mui/material";
+import { menu } from "../data/drawer";
+import AppListItem from "./AppListItem";
 
 const AppDrawer = () => {
   return (
@@ -12,9 +14,9 @@ const AppDrawer = () => {
 
       <Box>
         <List>
-          <ListItem button disableRipple>
-            <ListItemText>Dashboard</ListItemText>
-          </ListItem>
+          {menu.map((item) => (
+            <AppListItem Icon={item.Icon} title={item.label} />
+          ))}
         </List>
       </Box>
 
@@ -22,5 +24,8 @@ const AppDrawer = () => {
     </Drawer>
   );
 };
+
+
+
 
 export default AppDrawer;
