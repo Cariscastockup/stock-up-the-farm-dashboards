@@ -10,10 +10,11 @@ The main drawer of the dashboard containing links leading to other pages
 ### AppListItem
 Built on top of the components of ListItem in Mui. Returns a list item
         
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
+
+Props : *Icon: Renders and Icon Component in the list item
+        *image: If provided, renders an image in the place of Icon
+        *subtitle: Subtitle of the list item
+        *title: Title of the list item
         
 
 
