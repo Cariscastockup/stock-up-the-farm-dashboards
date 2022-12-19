@@ -1,21 +1,13 @@
 import React from "react";
-
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { Box } from "@mui/material";
+import AppDrawer from "./components/AppDrawer";
 
 function App() {
-
-
   return (
-      <Router>
-        <div className="App">
-          <Routes>
-            {/* <Route path="/product-list" element={<ProductListing />} /> */}
-
-          </Routes>
-        </div>
-      </Router>
+    <Box>
+      <AppDrawer />
+      <div className="App">Hello World</div>
+    </Box>
   );
 }
 
