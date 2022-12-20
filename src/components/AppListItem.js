@@ -5,7 +5,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 const AppListItem = ({ Icon, image = "none", subtitle, title, ...rest }) => {
   return (
@@ -42,4 +42,4 @@ const AppListItem = ({ Icon, image = "none", subtitle, title, ...rest }) => {
   );
 };
 
-export default AppListItem;
+export default memo(AppListItem);

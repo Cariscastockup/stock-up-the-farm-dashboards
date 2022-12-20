@@ -1,5 +1,5 @@
 # App Components
-This directory contains all the custom Components built into the app
+This directory contains all the custom Components created for the app
 
 ### AppDrawer
 The main drawer of the dashboard containing links leading to other pages.
@@ -8,15 +8,18 @@ Props:
 
 
 ### AppListItem
-Built on top of the components of ListItem in Mui. Returns a list item.
+Built on top of the components of ListItem in Mui. Returns a ListItem.
         
 Props : 
-* Icon: Renders and Icon Component in the list item.
-* image: If provided, renders an image in the place of Icon.
-* subtitle: Subtitle of the list item.
-* title: Title of the list item.
-        
+* Icon: Node; Renders and Icon Component in the list item.
+* image: String; If provided, renders an image in the place of Icon.
+* subtitle: String; Subtitle of the list item.
+* title: String; Title of the list item.
 
+### Main
+Holds the main section where data is displayed. It is mounted beside the AppDrawer.
 
-
-
+Props
+Name            | Type           | Required     | Description
+----------------|----------------|--------------|------------------------------------
+children        |React Node      | True         | Component(s) that would be mounted.    
