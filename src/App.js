@@ -5,13 +5,14 @@ import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 import AppContextComponent from "./context/AppContext";
 import Main from "./components/Main";
+import AppBar from "./components/AppBar";
 
 function App() {
   return (
     <AppContextComponent>
       <ThemeProvider theme={theme}>
         <Box>
-          
+          <AppBar />
           <AppDrawer />
           <Main>Hello World</Main>
         </Box>

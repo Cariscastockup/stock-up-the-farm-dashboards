@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, memo, useState } from "react";
 
 export const AppContext = createContext(null);
 const AppContextComponent = ({ children }) => {
@@ -12,4 +12,4 @@ const AppContextComponent = ({ children }) => {
   );
 };
 
-export default AppContextComponent;
+export default memo(AppContextComponent);

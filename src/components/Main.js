@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { Box } from "@mui/material";
 import { AppContext } from "../context/AppContext";
 import { useTheme } from "@mui/material";
@@ -20,4 +20,4 @@ const Main = ({ children }) => {
   );
 };
 
-export default Main;
+export default memo(Main);
