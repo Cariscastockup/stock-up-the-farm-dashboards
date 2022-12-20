@@ -76,7 +76,7 @@ const AppBar = () => {
           </Grid>
         </Toolbar>
       </MuiAppBar>
-      <Box sx={{ marginBottom: "4em" }} />
+      <Box sx={{ marginBottom: theme.spacing(8) }} />
     </Box>
   );
 };

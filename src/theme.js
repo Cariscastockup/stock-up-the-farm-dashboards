@@ -5,7 +5,7 @@ const theme = createTheme({
     common: {
       black: "#000000",
       white: "#FFFFFF",
-      lightXs: "",
+      lightXs: "#EAEAEA",
       lightSm: "",
       lightMd: "",
       lightLg: "",
