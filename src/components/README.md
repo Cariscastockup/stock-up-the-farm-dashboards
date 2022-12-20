@@ -17,7 +17,6 @@ title           |String          | True         | Displays the main text of the 
 subtitle        |String          | False        | Displays the subtitle of the list item.
 Icon            |React Node      | False        | Mounts an icon component on the left side of the list item.
 image           |String          | False        | Displays an avatar image in the list item.
-----------------|----------------|--------------|--------------------------------------------------------------
 
 ### Main
 The section where the main content of the page is displayed. It contains and separates the page from the AppDrawer
