@@ -30,17 +30,16 @@ Contains all the routes of the app.
 Renders data supplied to it as a table.
 
 Props
-Name                  | Type           | Required     | Description
-----------------------|----------------|--------------|---------------------------------------------------------------
-columns = [],         |[Objects]       |True          |Marks columns of the table
-data = [],            |[Objects]       |True          |Data supplied to be rendered in the table.
-rowKeyProp,           |String          |True          |Value supplied to this prop is used as the key for rows in the table.
-showTableBody = true, |Boolean         |False         |Determines whether the table body would be rendered or not.
-showTableHead = true, |Boolean         |False         |Determines whether the table head would be rendered or not.
-tableBodyCellStyle,   |Style Object    |False         |Takes a style object for styling table cells.
+Name                    | Type           | Required     | Description
+------------------------|----------------|--------------|---------------------------------------------------------------
+`columns`               |[Objects]       |True          |Marks columns of the table
+`data`                  |[Objects]       |True          |Data supplied to be rendered in the table.
+`rowKeyProp`            |String          |True          |Value supplied to this prop is used as the key for rows in the table.
+`showTableBody`         |Boolean         |False         |Determines whether the table body would be rendered or not.
+`showTableHead`         |Boolean         |False         |Determines whether the table head would be rendered or not.
+`tableBodyCellStyle`    |Style Object    |False         |Takes a style object for styling table cells.
 
-Below is an example for using a table.
-
+Below is an example for using the AppTable Component.
 ```
     // marks the rows of the table and also contains some properties
     // of the rows in the table body
@@ -67,7 +66,7 @@ Below is an example for using a table.
         },
     ];
 
-    // data to be fed in the table
+    // data to be fed into the table
     const data = [
         { _id: "1", name: "Isaac", age: "20", balance: "10,000" },
         { _id: "2", name: "Josh", age: "19", balance: "10,000" },
