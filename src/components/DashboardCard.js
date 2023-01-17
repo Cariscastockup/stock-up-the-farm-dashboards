@@ -11,15 +11,21 @@ const DashboardCard = ({
   chipBackgroundColor,
 }) => {
   const theme = useTheme();
+
+  if (!title) throw new Error("title is a required prop.");
+  if (!value) throw new Error("value is a required prop.");
+
   return (
     <Box>
       <Grid
         container
         direction="column"
-        spacing={2}
+        rowSpacing={2}
         sx={{
           backgroundColor: theme.palette.common.lightXs,
-          padding: theme.spacing(2),
+          padding: theme.spacing(2), 
+          paddingLeft: theme.spacing(3), 
+          paddingRight: theme.spacing(3), 
           borderRadius: theme.spacing(1),
         }}
       >
