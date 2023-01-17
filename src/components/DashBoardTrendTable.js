@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { memo } from "react";
 import AppTable from "./AppTable";
 
-const DashBoardTrendTable = ({ columns, data, title = "Top Products" }) => {
+const DashBoardTrendTable = ({ columns, data, title }) => {
   return (
     <Box
       sx={(theme) => ({

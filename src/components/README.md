@@ -26,6 +26,47 @@ Name              | Type           | Required     | Description
 Contains all the routes of the app.
 
 
+### AppSelect
+Renders a Select Input Component.
+
+Props
+Name                  | Type            | Required          | Description
+----------------------|-----------------|-------------------|-------------------------------------------------------------------------
+`label`               |String           | True              | Label of Input.
+`labelProp`           |String           | False             | Property of the options object to be used as Label on the select options.
+`name`                |String           | False             | Name of the select input.
+`onItemSelect`        |String           | False             | Takes a function for setting the input of the select input.
+`options`             |String           | False             | Takes an array of objects and renders them as options.
+`value,`              |String           | False             | Value of the select input.
+`valueProp,`          |String           | False             | Property of the options object to be used as value during select.
+
+Example of using the AppSelect Component
+```
+const [value, setValue] = useState("none");
+
+const options = [
+    { _id: "none", label: "Location" },
+    { _id: "1", label: "Accra" },
+    { _id: "2", label: "Kumasi" },
+    { _id: "3", label: "Tamale" },
+    { _id: "3", label: "Takoradi" },
+    { _id: "3", label: "Ho" },
+];
+
+const handleSelect = (value) => {
+   setValue(value);
+};
+
+<AppSelect
+    labelProp="label"
+    valueProp="_id"
+    value={value}
+    options={options}
+    onItemSelect={handleSelect}
+/>
+```
+
+
 ### AppTable
 Renders data supplied to it as a table.
 
@@ -97,11 +138,41 @@ Name                  | Type           | Required     | Description
 `chipTintColor`       |String          |False         |Color for text and icons.
 `chipBackgroundColor` |String          |False         |Color for the chip background..
 
+### DashBoardTrendTable
+This component is built on top of the AppTable to summarize top data in the dashboard.
+
+Props
+Name                    | Type           | Required     | Description
+------------------------|----------------|--------------|---------------------------------------------------------------
+`columns`               |[Objects]       |True          |Marks columns of the table
+`data`                  |[Objects]       |True          |Data supplied to be rendered in the table.
+
+
+### TrendTableContainer
+Contains TrendTable Components
+
+
 ### Main
 Mounts the section where the main content of the page is displayed. It contains and separates the page from the AppDrawer
 and the AppBar Components. The component receives some of its data from the AppContext.
 
 Props
-Name            | Type           | Required     | Description
-----------------|----------------|--------------|---------------------------------------------------------------
-`children`        |React Node      | True         | Component(s) that would be mounted.    
+Name            --| Type           | Required     | Description
+------------------|----------------|--------------|---------------------------------------------------------------
+`children`        | React Node     | True         | Component(s) that would be mounted.    
+
+
+### PageContainer
+Built on top of the Box component in `@mui/material`, applies paddings its content.
+
+Name                  | Type           | Required     | Description
+----------------------|----------------|--------------|---------------------------------------------------------------
+`children`            |React Node      | True         | Content of the container
+`paddingBottom`       |String, Number  | False        | Applies padding at the bottom
+`paddingHorizontal`   |String, Number  | False        | Applies left and right padding
+`paddingLeft`         |String, Number  | False        | Applies left padding
+`paddingRight`        |String, Number  | False        | Applies right padding
+`paddingTop`          |String, Number  | False        | Applies top padding
+`paddingVertical`     |String, Number  | False        | Applies top and bottom paddings
+
+
