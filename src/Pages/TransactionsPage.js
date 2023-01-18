@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 
 import PageContainer from "../components/PageContainer";
+import TransactionsTable from "../components/TransactionsTable";
 import TransactionsTableToolbar from "../components/TransactionsTableToolbar";
 
 const TransactionsPage = () => {
@@ -12,6 +13,8 @@ const TransactionsPage = () => {
       </Typography>
 
       <TransactionsTableToolbar />
+
+      <TransactionsTable />
     </PageContainer>
   );
 };

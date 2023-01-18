@@ -4,18 +4,16 @@ import AppSearchBox from "./AppSearchBox";
 import AppSelect from "./AppSelect";
 
 const TransactionsTableToolbar = () => {
-  const [productOptionsValue, setProductOptionsValue] = useState("none");
-  const productOptions = [
+  const [statusOptionsValue, setStatusOptionsValue] = useState("none");
+  const statusOptions = [
     { _id: "none", label: "All" },
-    { _id: "1", label: "Cocoa" },
-    { _id: "2", label: "Cashew" },
-    { _id: "3", label: "Kiwi" },
-    { _id: "4", label: "Oil Palm Fruits" },
-    { _id: "5", label: "Onion" },
-    { _id: "6", label: "Shea nut" },
+    { _id: "1", label: "Pending" },
+    { _id: "2", label: "Processing" },
+    { _id: "3", label: "Completed" },
+    { _id: "5", label: "Failed" },
   ];
 
-  const handleProductSelect = (value) => setProductOptionsValue(value);
+  const handleStatusSelect = (value) => setStatusOptionsValue(value);
 
   return (
     <Box sx={{ padding: "1em 0", margin: 0 }}>
@@ -26,7 +24,7 @@ const TransactionsTableToolbar = () => {
         spacing={2}
       >
         <Grid item lg={4} md={6} sm={5} xs={12}>
-          <AppSearchBox placeholder="Search Buyers..." />
+          <AppSearchBox placeholder="Search Transactions by Invoice ID..." />
         </Grid>
 
         <Grid md={4} sm={4} xs={12} item>
@@ -40,9 +38,9 @@ const TransactionsTableToolbar = () => {
               <AppSelect
                 labelProp="label"
                 valueProp="_id"
-                value={productOptionsValue}
-                options={productOptions}
-                onItemSelect={handleProductSelect}
+                value={statusOptionsValue}
+                options={statusOptions}
+                onItemSelect={handleStatusSelect}
               />
             </Grid>
           </Grid>
