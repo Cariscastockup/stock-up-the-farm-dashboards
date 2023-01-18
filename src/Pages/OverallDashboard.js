@@ -10,7 +10,7 @@ const OverallDashboard = () => {
 
   return (
     <PageContainer>
-      <Container>
+      <Container maxWidth="xl">
         <DashboardCardContainer />
         <DashboardChartContainer />
         <TrendTableContainer />

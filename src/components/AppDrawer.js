@@ -5,10 +5,16 @@ import AppListItem from "./AppListItem";
 import { useTheme } from "@mui/material";
 import { menu, supportMenu } from "../data/drawer";
 import { AppContext } from "../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const AppDrawer = () => {
   const theme = useTheme();
-  const { drawerOpen, setDrawerOpen, drawerWidth } = useContext(AppContext);
+  const navigate = useNavigate();
+  const { drawerOpen, drawerWidth } = useContext(AppContext);
+
+  const handleRouteChange = (link = null) => {
+    navigate(link)
+  };
 
   return (
     <Drawer
@@ -31,6 +37,7 @@ const AppDrawer = () => {
               key={index.toString()}
               Icon={item.Icon}
               title={item.label}
+              onClick={() => handleRouteChange(item?.link)}
             />
           ))}
         </List>
