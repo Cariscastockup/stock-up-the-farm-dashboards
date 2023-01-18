@@ -3,7 +3,7 @@ This directory contains all the custom Components created for the app. Below is 
 components and their props.
 
 ### `Caution`
-If you *add new components* or *make changes to a component* that modifies its *current interface (__Eg. props__)* , kindly update this README.md file accordingly.
+If you **add new components** or **make changes to a component** that modifies its *current interface (_Eg. props_)* , kindly update this README.md file accordingly.
 
 
 ### AppDrawer
