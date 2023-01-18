@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, useTheme } from "@mui/material";
+import { Box, Container, useTheme } from "@mui/material";
 
 const PageContainer = ({
   children,
+  maxWidth="xl",
   paddingBottom,
   paddingHorizontal,
   paddingLeft,
@@ -23,7 +24,9 @@ const PageContainer = ({
           paddingRight || paddingHorizontal || `${theme.spacing(2)}`,
       }}
     >
+      <Container maxWidth={maxWidth}>
       {children}
+      </Container>
     </Box>
   );
 };

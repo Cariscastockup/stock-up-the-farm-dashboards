@@ -1,10 +1,9 @@
-import React from "react";
 import { Box } from "@mui/material";
-
+import React from "react";
 import AppTable from "./AppTable";
-import CooperativeTableToolbar from "./CooperativeTableToolbar";
+import BuyerTableToolbar from "./BuyersTableToolbar";
 
-const CooperativesTableContainer = () => {
+const BuyersTable = () => {
   const columns = [
     {
       label: "Name",
@@ -15,7 +14,7 @@ const CooperativesTableContainer = () => {
       dataIndex: "location",
     },
     {
-      label: "Major Products",
+      label: "Products Purchased",
       dataIndex: "majorProducts",
     },
     {
@@ -31,7 +30,7 @@ const CooperativesTableContainer = () => {
   const data = [
     {
       _id: "1",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -39,7 +38,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "2",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -47,7 +46,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "3",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -55,7 +54,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "4",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -63,7 +62,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "5",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -71,7 +70,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "6",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -79,7 +78,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "7",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -87,7 +86,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "8",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -95,7 +94,7 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "9",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
@@ -103,24 +102,24 @@ const CooperativesTableContainer = () => {
     },
     {
       _id: "10",
-      name: "Cooperative A",
+      name: "Buyer A",
       location: "Kumasi",
       majorProducts: "Apple, Orange, Kiwi",
       minorProducts: "Pineaple, Pear",
       dateJoined: "12/09/2022",
     },
   ];
+
   return (
     <Box>
-      <CooperativeTableToolbar/>
+      <BuyerTableToolbar />
       <AppTable
+        tableBodyCellStyle={{ border: "none" }}
         columns={columns}
         data={data}
-        rowKeyProp="_id"
-        tableBodyCellStyle={{ border: "none" }}
       />
     </Box>
   );
 };
 
-export default CooperativesTableContainer;
+export default BuyersTable;

@@ -1,18 +1,19 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import BuyersTable from "../components/BuyersTable";
+import OrdersTable from "../components/OrdersTable";
+
 import PageContainer from "../components/PageContainer";
 
-const BuyersPage = () => {
+const OrdersPage = () => {
   return (
     <PageContainer>
-      <Typography fontWeight={"bold"} variant="h6">
-        Buyers
+      <Typography variant="h6" fontWeight={"bold"}>
+        Orders(23)
       </Typography>
 
-      <BuyersTable />
+      <OrdersTable />
     </PageContainer>
   );
 };
 
-export default BuyersPage;
+export default OrdersPage;

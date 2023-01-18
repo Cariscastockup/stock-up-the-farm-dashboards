@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Container } from "@mui/material";
+
 
 import PageContainer from "../components/PageContainer";
 import TrendTableContainer from "../components/TrendTableContainer";
@@ -10,11 +10,9 @@ const OverallDashboard = () => {
 
   return (
     <PageContainer>
-      <Container maxWidth="xl">
-        <DashboardCardContainer />
-        <DashboardChartContainer />
-        <TrendTableContainer />
-      </Container>
+      <DashboardCardContainer />
+      <DashboardChartContainer />
+      <TrendTableContainer />
     </PageContainer>
   );
 };

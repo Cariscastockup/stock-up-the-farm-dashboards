@@ -145,6 +145,12 @@ Below is an example for using the AppTable Component.
 ```
 
 ### Cooperatives Table.
+Contains an `AppTable` the that renders the buyers data.
+
+### BuyersTableToolBar
+Container for buttons and other utilities that provide more functionality to the Buyers table.
+
+### Cooperatives Table.
 Contains an `AppTable` the that renders the cooperatives data.
 
 
@@ -180,10 +186,6 @@ Name                    | Type           | Required     | Description
 `data`                  |[Objects]       |True          |Data supplied to be rendered in the table.
 
 
-### TrendTableContainer
-Contains TrendTable Components
-
-
 ### Main
 Mounts the section where the main content of the page is displayed. It contains and separates the page from the AppDrawer
 and the AppBar Components. The component receives some of its data from the AppContext.
@@ -191,20 +193,31 @@ and the AppBar Components. The component receives some of its data from the AppC
 Props
 Name            --| Type           | Required     | Description
 ------------------|----------------|--------------|---------------------------------------------------------------
-`children`        | React Node     | True         | Component(s) that would be mounted.    
+`children`        | React Node     | True         | Component(s) that would be mounted. 
+
+
+### OrdersTableToolBar
+Container for buttons and other utilities that provide more functionality to the Orders table.
+
+
+### Orders Table.
+Contains an `AppTable` the that renders the orders data.
 
 
 ### PageContainer
 Built on top of the Box component in `@mui/material`, applies paddings its content.
 
-Name                  | Type           | Required     | Description
-----------------------|----------------|--------------|---------------------------------------------------------------
-`children`            |React Node      | True         | Content of the container
-`paddingBottom`       |String, Number  | False        | Applies padding at the bottom
-`paddingHorizontal`   |String, Number  | False        | Applies left and right padding
-`paddingLeft`         |String, Number  | False        | Applies left padding
-`paddingRight`        |String, Number  | False        | Applies right padding
-`paddingTop`          |String, Number  | False        | Applies top padding
-`paddingVertical`     |String, Number  | False        | Applies top and bottom paddings
+Name                  | Type                       | Required     | Description
+----------------------|----------------------------|--------------|---------------------------------------------------------------
+`children`            |React Node                  | True         | Content of the container
+`maxWidth`            |String [xs, sm, lg, xl]     | False        | Applies max width constraints to the container.
+`paddingBottom`       |String, Number              | False        | Applies padding at the bottom
+`paddingHorizontal`   |String, Number              | False        | Applies left and right padding
+`paddingLeft`         |String, Number              | False        | Applies left padding
+`paddingRight`        |String, Number              | False        | Applies right padding
+`paddingTop`          |String, Number              | False        | Applies top padding
+`paddingVertical`     |String, Number              | False        | Applies top and bottom paddings
 
 
+### TrendTableContainer
+Contains the TrendTable Components on the Dashboard Home
