@@ -29,7 +29,7 @@ const CooperativeTableToolbar = () => {
   ];
 
   const handleLocationSelect = (value) => setLocationOptionValue(value);
-  const handleProductSelect = (value) => setLocationOptionValue(value);
+  const handleProductSelect = (value) => setProductOptionsValue(value);
 
   return (
     <Box sx={{ padding: "1em 0", margin: 0 }}>

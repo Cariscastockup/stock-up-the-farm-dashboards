@@ -2,7 +2,14 @@ import { Search } from "@mui/icons-material";
 import { InputAdornment, InputBase } from "@mui/material";
 import React from "react";
 
-const AppSearchBox = ({ placeholder, fullWidth, ...rest }) => {
+const AppSearchBox = ({
+  placeholder,
+  fullWidth,
+  loading,
+  active,
+  onSearch,
+  ...rest
+}) => {
   return (
     <InputBase
       fullWidth

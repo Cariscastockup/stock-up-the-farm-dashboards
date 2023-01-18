@@ -2,6 +2,10 @@
 This directory contains all the custom Components created for the app. Below is information about the various 
 components and their props.
 
+### `Caution`
+If you *add new components* or *make changes to a component* that modifies its *current interface (__Eg. props__)* , kindly update this README.md file accordingly.
+
+
 ### AppDrawer
 The main drawer of the dashboard containing links leading to other pages.
 
@@ -24,6 +28,24 @@ Name              | Type           | Required     | Description
 
 ### AppRoutesContainer
 Contains all the routes of the app.
+
+
+### AppSearchBox
+Built on top the `InputBase` component, it provides and input for searching data.
+
+Props
+Name                  | Type            | Required          | Description
+----------------------|-----------------|-------------------|--------------------------------------------------------------------------
+placeholder           | String          | False             | Placeholder for the search input.   
+fullWidth             | Boolean         | False             | Determines whether the component should span its containers' full width.
+loading               | Boolean         | False             | Shows or hides the load indicator.   
+active                | Boolean         | False             | Shows whether the input is empty or not.
+onSearch              | Function        | True              | Take a funtion for issuing search.
+
+Example of Using A Search
+```
+This has not been documented yet.
+```
 
 
 ### AppSelect
@@ -122,6 +144,12 @@ Below is an example for using the AppTable Component.
     />
 ```
 
+### Cooperatives Table.
+Contains an `AppTable` the that renders the cooperatives data.
+
+
+### CooperativeTableToolBar
+Container for buttons and other utilities that provide more functionality to the Cooperatives table.
 
 
 ### DashboardCard
@@ -138,8 +166,12 @@ Name                  | Type           | Required     | Description
 `chipTintColor`       |String          |False         |Color for text and icons.
 `chipBackgroundColor` |String          |False         |Color for the chip background..
 
+
+### DashboardCardContainer
+Contains the `DashBoardCard` components in the Dashboard Home Page.
+
 ### DashBoardTrendTable
-This component is built on top of the AppTable to summarize top data in the dashboard.
+This component is built on top of the `AppTable` to summarize top data in the dashboard.
 
 Props
 Name                    | Type           | Required     | Description
