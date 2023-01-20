@@ -1,5 +1,5 @@
 import React, { memo, useContext } from "react";
-import { Box, Drawer, Grid, List, Typography } from "@mui/material";
+import { Box, Drawer, Grid, List } from "@mui/material";
 
 import AppListItem from "./AppListItem";
 import { useTheme } from "@mui/material";
