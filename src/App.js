@@ -1,22 +1,29 @@
-import React from "react";
+import React, { memo } from "react";
+import { Box } from "@mui/material";
 
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AppBar from "./components/AppBar";
+import AppDrawer from "./components/AppDrawer";
+import AppContextComponent from "./context/AppContext";
+import AppRoutesContainer from "./components/AppRoutesContainer";
+import Main from "./components/Main";
+import theme from "./theme";
+import { ThemeProvider } from "@mui/material";
 
 
 function App() {
-
-
   return (
-      <Router>
-        <div className="App">
-          <Routes>
-            {/* <Route path="/product-list" element={<ProductListing />} /> */}
-
-          </Routes>
-        </div>
-      </Router>
+    <AppContextComponent>
+      <ThemeProvider theme={theme}>
+        <Box>
+          <AppBar />
+          <AppDrawer />
+          <Main>
+            <AppRoutesContainer />
+          </Main>
+        </Box>
+      </ThemeProvider>
+    </AppContextComponent>
   );
 }
 
-export default App;
+export default memo(App);
