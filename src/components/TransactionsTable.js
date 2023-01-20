@@ -1,12 +1,30 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import AppTable from "./AppTable";
+import { Link } from "react-router-dom";
+import { useTheme } from "@emotion/react";
 
 const TransactionsTable = () => {
+  const theme = useTheme();
   const columns = [
     {
       label: "Invoice ID (#)",
       dataIndex: "invoiceId",
+      render: (item) => (
+        <Typography
+          component={Link}
+          sx={{
+            cursor: "pointer",
+            color: theme.palette.common.black,
+            textDecoration: "none",
+            "&:hover": { textDecoration: "underline" },
+          }}
+          to={item._id}
+          variant="body2"
+        >
+          {item["invoiceId"]}
+        </Typography>
+      ),
     },
     {
       label: "Cooperatives",

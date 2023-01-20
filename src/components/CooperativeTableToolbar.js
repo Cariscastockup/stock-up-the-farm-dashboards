@@ -14,8 +14,8 @@ const CooperativeTableToolbar = () => {
     { _id: "1", label: "Accra" },
     { _id: "2", label: "Kumasi" },
     { _id: "3", label: "Tamale" },
-    { _id: "3", label: "Takoradi" },
-    { _id: "3", label: "Ho" },
+    { _id: "4", label: "Takoradi" },
+    { _id: "5", label: "Ho" },
   ];
 
   const productOptions = [

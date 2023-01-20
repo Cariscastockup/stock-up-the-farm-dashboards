@@ -1,10 +1,12 @@
 import React, { memo } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import OverallDashboard from "../Pages/OverallDashboard";
-import CooperativesPage from "../Pages/CooperativesPage";
 import BuyersPage from "../Pages/BuyersPage";
+import CooperativesPage from "../Pages/CooperativesPage";
 import OrdersPage from "../Pages/OrdersPage";
+import OverallDashboard from "../Pages/OverallDashboard";
+import SettingsPage from "../Pages/SettingsPage";
 import TransactionsPage from "../Pages/TransactionsPage";
+import TransactionDetailsPage from "./TransactionDetailsPage";
 
 const AppRoutesContainer = () => {
   return (
@@ -14,6 +16,8 @@ const AppRoutesContainer = () => {
       <Route path="/dashboard" element={<OverallDashboard />} />
       <Route path="/orders" element={<OrdersPage />} />
       <Route path="/transactions" element={<TransactionsPage />} />
+      <Route path="/transactions/:id" element={<TransactionDetailsPage />} />
+      <Route path="/settings" element={<SettingsPage />} />
       <Route path="/" element={<Navigate to={"/dashboard"} />} />
     </Routes>
   );

@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react";
 import {
   CardMedia,
   ListItem,
@@ -7,9 +8,24 @@ import {
 } from "@mui/material";
 import React, { memo } from "react";
 
-const AppListItem = ({ Icon, image = "none", subtitle, title, ...rest }) => {
+const AppListItem = ({
+  Icon,
+  image = "none",
+  subtitle,
+  title,
+  selected,
+  ...rest
+}) => {
+  const theme = useTheme();
   return (
-    <ListItem button disableRipple {...rest}>
+    <ListItem
+      button
+      disableRipple
+      sx={{
+        backgroundColor: selected ? theme.palette.grey["200"] : "none",
+      }}
+      {...rest}
+    >
       {(Icon || image !== "none") && (
         <ListItemAvatar>
           {Icon}

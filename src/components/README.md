@@ -200,13 +200,14 @@ Name            --| Type           | Required     | Description
 Container for buttons and other utilities that provide more functionality to the Orders table.
 
 
-### Orders Table.
+### Orders Table
 Contains an `AppTable` the that renders the orders data.
 
 
 ### PageContainer
 Built on top of the Box component in `@mui/material`, applies paddings its content.
 
+Props
 Name                  | Type                       | Required     | Description
 ----------------------|----------------------------|--------------|---------------------------------------------------------------
 `children`            |React Node                  | True         | Content of the container
@@ -221,3 +222,28 @@ Name                  | Type                       | Required     | Description
 
 ### TrendTableContainer
 Contains the TrendTable Components on the Dashboard Home
+
+
+### TransactionsTable
+Renders transactions data.
+
+
+### TransactionsTableToolBar
+Container for buttons and other utilities that provide more functionality to the Transactions table.
+
+
+### TransactionDetailsTableFooter
+Display summery text at the bottom of the Transaction Details Table.
+Props
+Name                  | Type                       | Required     | Description
+----------------------|----------------------------|--------------|---------------------------------------------------------------
+`total`               |String                      | True         | Display the total of the transaction invoice.
+
+
+### TransactionDetailsHeader
+Displays a banner that the top of the transaction details table.
+Props
+Name                          | Type                          | Required     | Description
+------------------------------|-------------------------------|--------------|---------------------------------------------------------------
+`senderName`                  |String                         | True         | Displays the sender's name.
+`recipientName`               |String                         | True         | Displays the recipient's name.
