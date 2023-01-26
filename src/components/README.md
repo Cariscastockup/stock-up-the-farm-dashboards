@@ -144,6 +144,12 @@ Below is an example for using the AppTable Component.
     />
 ```
 
+### AppTextField
+A component for taking user input. Built on top of the Mui TextField.
+
+Props
+The component inherits almost all its props from <a href="https://mui.com/material-ui/api/text-field">TextField</a> component found in the material ui documentation.
+
 ### Cooperatives Table.
 Contains an `AppTable` the that renders the buyers data.
 
@@ -219,6 +225,9 @@ Name                  | Type                       | Required     | Description
 `paddingTop`          |String, Number              | False        | Applies top padding
 `paddingVertical`     |String, Number              | False        | Applies top and bottom paddings
 
+
+### SettingsPageAccountBox
+Contains Form Controls for Editing the Account Page.
 
 ### TrendTableContainer
 Contains the TrendTable Components on the Dashboard Home

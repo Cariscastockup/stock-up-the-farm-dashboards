@@ -1,6 +1,17 @@
 import { createTheme } from "@mui/material";
 
 const theme = createTheme({
+  components: {
+    MuiButton: {
+      defaultProps: {
+        variant: "contained",
+        disableElevation: true,
+      },
+      styleOverrides: {
+        root: { textTransform: "none" },
+      },
+    },
+  },
   palette: {
     common: {
       black: "#000000",
