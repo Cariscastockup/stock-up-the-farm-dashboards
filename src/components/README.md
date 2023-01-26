@@ -226,6 +226,9 @@ Name                  | Type                       | Required     | Description
 `paddingVertical`     |String, Number              | False        | Applies top and bottom paddings
 
 
+### PolicyAndSecurityBox
+Contains controls for makeing security updates.
+
 ### SettingsPageAccountBox
 Contains Form Controls for Editing the Account Page.
 
