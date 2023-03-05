@@ -1,4 +1,4 @@
-import { Divider, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { memo } from "react";
 import AppTable from "./AppTable";
