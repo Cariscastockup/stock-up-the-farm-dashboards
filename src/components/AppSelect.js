@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 const AppSelect = ({
   label,
@@ -28,4 +28,4 @@ const AppSelect = ({
   );
 };
 
-export default AppSelect;
+export default memo(AppSelect);

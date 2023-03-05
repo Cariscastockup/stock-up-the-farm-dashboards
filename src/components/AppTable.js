@@ -4,6 +4,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  useTheme
 } from "@mui/material";
 import React, { memo } from "react";
 
@@ -13,8 +14,11 @@ const AppTable = ({
   rowKeyProp,
   showTableBody = true,
   showTableHead = true,
+  tableHeadStyle,
   tableBodyCellStyle,
 }) => {
+  const theme = useTheme();
+
   const renderCell = (item, column) => {
     if (column?.render) return column.render(item);
 
@@ -22,9 +26,14 @@ const AppTable = ({
   };
 
   return (
-    <Table>
+    <Table
+      sx={{
+        borderRadius: "0.2em",
+        boxShadow: `0 0 0 1px ${theme.palette.common.lightXs}`,
+      }}
+    >
       {showTableHead && (
-        <TableHead>
+        <TableHead sx={tableHeadStyle}>
           <TableRow>
             {columns.map((c, index) => (
               <TableCell

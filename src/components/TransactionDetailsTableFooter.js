@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 const TransactionDetailsTableFooter = ({ total }) => {
   return (
@@ -36,4 +36,4 @@ const TransactionDetailsTableFooter = ({ total }) => {
   );
 };
 
-export default TransactionDetailsTableFooter;
+export default memo(TransactionDetailsTableFooter);

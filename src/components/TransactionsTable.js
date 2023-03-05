@@ -1,8 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { Box, Typography } from "@mui/material";
 import AppTable from "./AppTable";
 import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
+import StatusProgressBar from "./StatusProgressBar";
 
 const TransactionsTable = () => {
   const theme = useTheme();
@@ -41,6 +42,7 @@ const TransactionsTable = () => {
     {
       label: "Status",
       dataIndex: "status",
+      render: (item) => <StatusProgressBar value={item.status} />,
     },
     {
       label: "Date",
@@ -138,9 +140,10 @@ const TransactionsTable = () => {
         columns={columns}
         data={data}
         tableBodyCellStyle={{ border: "none" }}
+        tableHeadStyle={{ backgroundColor: theme.palette.primary.lightSm }}
       />
     </Box>
   );
 };
 
-export default TransactionsTable;
+export default memo(TransactionsTable);

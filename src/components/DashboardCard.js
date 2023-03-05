@@ -22,10 +22,11 @@ const DashboardCard = ({
         direction="column"
         rowSpacing={2}
         sx={{
-          backgroundColor: theme.palette.common.lightXs,
-          padding: theme.spacing(2), 
-          paddingLeft: theme.spacing(3), 
-          paddingRight: theme.spacing(3), 
+          border: `1px solid ${theme.palette.grey[300]}`,
+          backgroundColor: theme.palette.common.white,
+          padding: theme.spacing(2),
+          paddingLeft: theme.spacing(3),
+          paddingRight: theme.spacing(3),
           borderRadius: theme.spacing(1),
         }}
       >
@@ -35,7 +36,11 @@ const DashboardCard = ({
         </Grid>
         <Grid item container spacing={2} alignItems="center">
           <Grid item>
-            <Typography variant="subtitle2" fontWeight={"bold"}>
+            <Typography
+              fontWeight={"bold"}
+              sx={{ fontSize: "1.2em" }}
+              variant="subtitle2"
+            >
               {value}
             </Typography>
           </Grid>

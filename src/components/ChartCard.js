@@ -1,13 +1,13 @@
 import { useTheme } from "@emotion/react";
 import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 const ChartCard = ({ title, data }) => {
   const theme = useTheme();
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.common.lightXs,
+        border: `1px solid ${theme.palette.common.lightXs}`,
         padding: theme.spacing(2),
       }}
     >
@@ -33,4 +33,4 @@ const ChartCard = ({ title, data }) => {
   );
 };
 
-export default ChartCard;
+export default memo(ChartCard);

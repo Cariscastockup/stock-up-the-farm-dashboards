@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 import DashBoardTrendTable from "./DashBoardTrendTable";
 
 const TrendTableContainer = () => {
@@ -74,4 +74,4 @@ const TrendTableContainer = () => {
   );
 };
 
-export default TrendTableContainer;
+export default memo(TrendTableContainer);

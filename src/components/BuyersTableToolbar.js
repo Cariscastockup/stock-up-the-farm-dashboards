@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import AppSearchBox from "./AppSearchBox";
 import AppSelect from "./AppSelect";
 
@@ -53,4 +53,4 @@ const BuyersTableToolbar = () => {
   );
 };
 
-export default BuyersTableToolbar;
+export default memo(BuyersTableToolbar);

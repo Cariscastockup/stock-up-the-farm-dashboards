@@ -1,9 +1,10 @@
-import { Box } from "@mui/material";
-import React from "react";
+import { Box, useTheme } from "@mui/material";
+import React, { memo } from "react";
 import AppTable from "./AppTable";
 import BuyerTableToolbar from "./BuyersTableToolbar";
 
 const BuyersTable = () => {
+  const theme = useTheme()
   const columns = [
     {
       label: "Name",
@@ -114,12 +115,13 @@ const BuyersTable = () => {
     <Box>
       <BuyerTableToolbar />
       <AppTable
-        tableBodyCellStyle={{ border: "none" }}
         columns={columns}
         data={data}
+        tableBodyCellStyle={{ border: "none" }}
+        tableHeadStyle={{ backgroundColor: theme.palette.primary.lightSm }}
       />
     </Box>
   );
 };
 
-export default BuyersTable;
+export default memo(BuyersTable);

@@ -1,6 +1,6 @@
 import { Search } from "@mui/icons-material";
 import { InputAdornment, InputBase } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 const AppSearchBox = ({
   placeholder,
@@ -45,4 +45,4 @@ const AppSearchBox = ({
   );
 };
 
-export default AppSearchBox;
+export default memo(AppSearchBox);

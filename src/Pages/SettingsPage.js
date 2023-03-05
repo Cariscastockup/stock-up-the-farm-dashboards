@@ -10,20 +10,28 @@ const SettingsPage = () => {
 
   return (
     <PageContainer>
-      <Typography
-        fontWeight={"bold"}
-        gutterBottom
-        variant="h5"
-        sx={{ marginBottom: theme.spacing(4) }}
+      <Box
+        sx={{
+          border: `1px solid ${theme.palette.common.lightXs}`,
+          borderRadius: "0.6em",
+          padding: "1.5em",
+        }}
       >
-        Settings
-      </Typography>
+        <Typography
+          fontWeight={"bold"}
+          gutterBottom
+          variant="h5"
+          sx={{ marginBottom: theme.spacing(4) }}
+        >
+          Settings
+        </Typography>
 
-      <Box>
-        <Grid container spacing={6}>
-          <SettingsPageAccountBox />
-          <PolicyAndSecurityBox />
-        </Grid>
+        <Box>
+          <Grid container spacing={6}>
+            <SettingsPageAccountBox />
+            <PolicyAndSecurityBox />
+          </Grid>
+        </Box>
       </Box>
 
       <Grid
@@ -34,7 +42,10 @@ const SettingsPage = () => {
         <Grid item>
           <Button
             size="large"
-            sx={{ backgroundColor: theme.palette.primary.dark }}
+            sx={{
+              backgroundColor: theme.palette.common.darkgreen,
+              color: theme.palette.common.white,
+            }}
           >
             Save Changes
           </Button>

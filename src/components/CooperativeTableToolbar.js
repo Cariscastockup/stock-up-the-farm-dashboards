@@ -1,7 +1,7 @@
 import { DeleteOutlineSharp } from "@mui/icons-material";
 import { Grid, IconButton } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import AppSearchBox from "./AppSearchBox";
 import AppSelect from "./AppSelect";
 
@@ -95,4 +95,4 @@ const CooperativeTableToolbar = () => {
   );
 };
 
-export default CooperativeTableToolbar;
+export default memo(CooperativeTableToolbar);

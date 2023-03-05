@@ -20,9 +20,12 @@ const theme = createTheme({
       lightSm: "",
       lightMd: "#9e9e9e",
       lightLg: "",
+      darkgreen: "#005555",
     },
     primary: {
-      main: "#D9D9D9CC",
+      main: "#94B405",
+      lightMd: "#B8CD58",
+      lightSm: "rgba(148, 180, 5, 0.08)",
     },
   },
 });

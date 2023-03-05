@@ -44,7 +44,7 @@ const AppBar = () => {
                 disableRipple
                 onClick={() => setDrawerOpen(!drawerOpen)}
               >
-                <Menu />
+                <Menu sx={{ color: theme.palette.primary.main }} />
               </IconButton>
             </Grid>
 

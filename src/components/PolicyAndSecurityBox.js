@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { Button, Grid, Typography } from "@mui/material";
 import AppTextField from "./AppTextField";
@@ -27,11 +27,19 @@ const PolicyAndSecurityBox = () => {
           <AppTextField fullWidth label="Confirm New Password" />
         </Grid>
         <Grid item xs={12}>
-          <Button size="large">Save Changes</Button>
+          <Button
+            sx={{
+              backgroundColor: theme.palette.common.darkgreen,
+              color: theme.palette.common.white,
+            }}
+            size="large"
+          >
+            Save Changes
+          </Button>
         </Grid>
       </Grid>
     </Grid>
   );
 };
 
-export default PolicyAndSecurityBox;
+export default memo(PolicyAndSecurityBox);

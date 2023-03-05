@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { Box, Container, useTheme } from "@mui/material";
 
 const PageContainer = ({
   children,
-  maxWidth="xl",
+  maxWidth = "xl",
   paddingBottom,
   paddingHorizontal,
   paddingLeft,
@@ -24,11 +24,9 @@ const PageContainer = ({
           paddingRight || paddingHorizontal || `${theme.spacing(2)}`,
       }}
     >
-      <Container maxWidth={maxWidth}>
-      {children}
-      </Container>
+      <Container maxWidth={maxWidth}>{children}</Container>
     </Box>
   );
 };
 
-export default PageContainer;
+export default memo(PageContainer);

@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import AppSearchBox from "./AppSearchBox";
 import AppSelect from "./AppSelect";
 
@@ -50,4 +50,4 @@ const TransactionsTableToolbar = () => {
   );
 };
 
-export default TransactionsTableToolbar;
+export default memo(TransactionsTableToolbar);

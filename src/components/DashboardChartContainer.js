@@ -1,5 +1,5 @@
 import { Box, Grid } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 import ChartCard from "./ChartCard";
 
 const DashboardChartContainer = () => {
@@ -17,4 +17,4 @@ const DashboardChartContainer = () => {
   );
 };
 
-export default DashboardChartContainer;
+export default memo(DashboardChartContainer);

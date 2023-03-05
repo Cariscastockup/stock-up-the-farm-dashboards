@@ -22,7 +22,11 @@ const AppDrawer = () => {
     <Drawer
       open={drawerOpen}
       PaperProps={{
-        sx: { width: drawerWidth, backgroundColor: theme.palette.primary.main },
+        sx: {
+          width: drawerWidth,
+          backgroundColor: theme.palette.primary.main,
+          border: "none",
+        },
       }}
       variant="persistent"
     >
@@ -35,7 +39,7 @@ const AppDrawer = () => {
         >
           <Grid item>
             <ChangeHistory
-              sx={{ fontSize: "5em", color: theme.palette.common.lightMd }}
+              sx={{ fontSize: "5em", color: theme.palette.common.white }}
             />
           </Grid>
         </Grid>
@@ -47,9 +51,20 @@ const AppDrawer = () => {
             <AppListItem
               key={index.toString()}
               Icon={item.Icon}
-              selected={location.pathname === item?.link}
               title={item.label}
               onClick={() => handleRouteChange(item?.link)}
+              sx={{
+                color: theme.palette.common.white,
+                ...(location.pathname === item?.link && {
+                  backgroundColor: theme.palette.common.white,
+                  color: theme.palette.primary.main,
+                  "&:hover": {
+                    backgroundColor: theme.palette.common.white,
+                    color: theme.palette.primary.main,
+                    opacity: 0.9,
+                  },
+                }),
+              }}
             />
           ))}
         </List>
@@ -63,6 +78,18 @@ const AppDrawer = () => {
               Icon={item.Icon}
               title={item.label}
               onClick={() => handleRouteChange(item?.link)}
+              sx={{
+                color: theme.palette.common.white,
+                ...(location.pathname === item?.link && {
+                  backgroundColor: theme.palette.common.white,
+                  color: theme.palette.primary.main,
+                  "&:hover": {
+                    backgroundColor: theme.palette.common.white,
+                    color: theme.palette.primary.main,
+                    opacity: 0.9,
+                  },
+                }),
+              }}
             />
           ))}
         </List>

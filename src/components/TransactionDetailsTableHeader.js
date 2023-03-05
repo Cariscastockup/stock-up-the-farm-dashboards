@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Grid, Paper, Typography, useTheme } from "@mui/material";
 import { Shuffle } from "@mui/icons-material/";
 
@@ -9,7 +9,7 @@ const TransactionDetailsTableHeader = ({ senderName, recipientName }) => {
     <Paper
       elevation={0}
       sx={{
-        backgroundColor: theme.palette.common.lightXs,
+        backgroundColor: theme.palette.primary.lightMd,
         paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
         paddingTop: theme.spacing(3),
@@ -26,23 +26,28 @@ const TransactionDetailsTableHeader = ({ senderName, recipientName }) => {
         <Grid item xs={5}>
           <Grid container flexDirection={"column"} rowSpacing={1}>
             <Grid item>
-              <Typography variant="subtitle2">Sender</Typography>
+              <Typography
+                variant="subtitle2"
+                sx={{ color: theme.palette.common.white }}
+              >
+                Sender
+              </Typography>
             </Grid>
             <Grid item>
-              <Typography fontWeight={"bold"}>{senderName}</Typography>
+              <Typography fontWeight={"bold"} sx={{ color: theme.palette.common.white }}>{senderName}</Typography>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={2}>
-          <Shuffle />
+          <Shuffle sx={{color: theme.palette.common.white}} />
         </Grid>
         <Grid item xs={5}>
           <Grid container flexDirection={"column"} rowSpacing={1}>
             <Grid item>
-              <Typography variant="subtitle2">Recipient</Typography>
+              <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>Recipient</Typography>
             </Grid>
             <Grid item>
-              <Typography fontWeight={"bold"}>{recipientName}</Typography>
+              <Typography fontWeight={"bold"} sx={{ color: theme.palette.common.white }}>{recipientName}</Typography>
             </Grid>
           </Grid>
         </Grid>
@@ -51,4 +56,4 @@ const TransactionDetailsTableHeader = ({ senderName, recipientName }) => {
   );
 };
 
-export default TransactionDetailsTableHeader;
+export default memo(TransactionDetailsTableHeader);

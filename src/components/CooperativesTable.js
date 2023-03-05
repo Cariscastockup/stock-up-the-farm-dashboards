@@ -1,10 +1,11 @@
-import React from "react";
-import { Box } from "@mui/material";
+import React, { memo } from "react";
+import { Box, useTheme } from "@mui/material";
 
 import AppTable from "./AppTable";
 import CooperativeTableToolbar from "./CooperativeTableToolbar";
 
 const CooperativesTableContainer = () => {
+  const theme = useTheme();
   const columns = [
     {
       label: "Name",
@@ -112,15 +113,15 @@ const CooperativesTableContainer = () => {
   ];
   return (
     <Box>
-      <CooperativeTableToolbar/>
+      <CooperativeTableToolbar />
       <AppTable
         columns={columns}
         data={data}
         rowKeyProp="_id"
-        tableBodyCellStyle={{ border: "none" }}
+        tableHeadStyle={{ backgroundColor: theme.palette.primary.lightSm }}
       />
     </Box>
   );
 };
 
-export default CooperativesTableContainer;
+export default memo(CooperativesTableContainer);

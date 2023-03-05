@@ -1,5 +1,5 @@
-import { Box, InputLabel, TextField, useTheme } from "@mui/material";
-import React from "react";
+import { InputLabel, TextField, useTheme } from "@mui/material";
+import React, { memo } from "react";
 
 const AppTextField = ({ label, name, fullWidth, inputLabel, ...rest }) => {
   const theme = useTheme();
@@ -46,4 +46,4 @@ const AppTextField = ({ label, name, fullWidth, inputLabel, ...rest }) => {
   );
 };
 
-export default AppTextField;
+export default memo(AppTextField);

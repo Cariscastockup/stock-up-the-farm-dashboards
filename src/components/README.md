@@ -101,6 +101,7 @@ Name                    | Type           | Required     | Description
 `showTableBody`         |Boolean         |False         |Determines whether the table body would be rendered or not.
 `showTableHead`         |Boolean         |False         |Determines whether the table head would be rendered or not.
 `tableBodyCellStyle`    |Style Object    |False         |Takes a style object for styling table cells.
+`tableHeadCellStyle`    |Style Object    |False         |Takes a style object for styling tablehead cells.
 
 Below is an example for using the AppTable Component.
 ```
@@ -231,6 +232,17 @@ Contains controls for makeing security updates.
 
 ### SettingsPageAccountBox
 Contains Form Controls for Editing the Account Page.
+
+### StatusProgressBar
+Renders the progress of a tracaction. The prop values that can be used
+on this component are `Pending`, `Processing`, `Completed`, and `Cancelled`.
+
+Props
+Name                  | Type                       | Required     | Description
+----------------------|----------------------------|--------------|---------------------------------------------------------------
+`value`               |String                      | True         | Content of the container
+
+
 
 ### TrendTableContainer
 Contains the TrendTable Components on the Dashboard Home

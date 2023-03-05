@@ -1,5 +1,5 @@
 import { Box, Button, Container, useTheme } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 
 import AppTable from "../components/AppTable";
 import PageContainer from "./PageContainer";
@@ -26,7 +26,7 @@ const TransactionDetailsPage = () => {
         <Box sx={{ marginBottom: theme.spacing(4) }}>
           <Button
             disableElevation
-            sx={{ textTransform: "none" }}
+            sx={{ textTransform: "none", color: theme.palette.common.white }}
             variant="contained"
           >
             Download {"("}CSV{")"}
@@ -50,4 +50,4 @@ const TransactionDetailsPage = () => {
   );
 };
 
-export default TransactionDetailsPage;
+export default memo(TransactionDetailsPage);

@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   Button,
   Grid,
@@ -6,7 +7,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 import AppTextField from "./AppTextField";
 
 const SettingsPageAccountBox = () => {
@@ -31,14 +32,15 @@ const SettingsPageAccountBox = () => {
           sx={{ marginBottom: theme.spacing(8) }}
         >
           <Grid item xs={3}>
-            <Box
+            <Avatar
+              src="../assets/images/profile_pic-2.jpg"
               sx={(theme) => ({
-                width: "9em",
-                height: "9em",
+                width: "7em",
+                height: "7em",
                 backgroundColor: theme.palette.common.lightXs,
                 borderRadius: "4.5em",
               })}
-            ></Box>
+            />
           </Grid>
           <Grid
             item
@@ -68,11 +70,19 @@ const SettingsPageAccountBox = () => {
           <AppTextField fullWidth label="Email Address" />
         </Grid>
         <Grid item>
-          <Button size="large">Save Changes</Button>
+          <Button
+            size="large"
+            sx={{
+              backgroundColor: theme.palette.common.darkgreen,
+              color: theme.palette.common.white,
+            }}
+          >
+            Save Changes
+          </Button>
         </Grid>
       </Grid>
     </Grid>
   );
 };
 
-export default SettingsPageAccountBox;
+export default memo(SettingsPageAccountBox);

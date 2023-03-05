@@ -1,9 +1,11 @@
+import { useTheme } from "@emotion/react";
 import { Box, Button } from "@mui/material";
-import React from "react";
+import React, { memo } from "react";
 import AppTable from "./AppTable";
 import OrdersTableToolbar from "./OrdersTableToolbar";
 
 const OrdersTable = () => {
+  const theme = useTheme();
   const columns = [
     {
       label: "Order ID (#)",
@@ -29,10 +31,10 @@ const OrdersTable = () => {
       label: "Cooperatives",
       render: (item) => (
         <Button
-          sx={{ textTransform: "none" }}
+          sx={{ textTransform: "none", color: theme.palette.common.darkgreen, borderColor: theme.palette.common.darkgreen }}
           onClick={() => console.log(item)}
           size="small"
-          variant="contained"
+          variant="outlined"
           disableElevation
         >
           Track Order
@@ -120,12 +122,13 @@ const OrdersTable = () => {
     <Box>
       <OrdersTableToolbar />
       <AppTable
-        tableBodyCellStyle={{ border: "none" }}
         columns={columns}
         data={data}
+        tableBodyCellStyle={{ border: "none" }}
+        tableHeadStyle={{ backgroundColor: theme.palette.primary.lightSm }}
       />
     </Box>
   );
 };
 
-export default OrdersTable;
+export default memo(OrdersTable);
