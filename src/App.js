@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Box } from "@mui/material";
 
-import AppBar from "./components/AppBar";
+import AppBar from "./Components/AppBar";
 import AppDrawer from "./components/AppDrawer";
 import AppContextComponent from "./context/AppContext";
 import AppRoutesContainer from "./components/AppRoutesContainer";
